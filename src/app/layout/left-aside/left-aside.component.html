@@ -1,0 +1,11 @@
+<ul class="side-sections">
+    <li>Friends</li>
+    
+    <ul class="side-friends">
+        <ng-container *ngFor="let friend of friendList">
+            <li *ngIf="friend">
+               <app-profile-avator (ProfileClicked)="ProfileTouched()" [person]="friend"></app-profile-avator>
+            </li>
+        </ng-container>
+    </ul>
+</ul>

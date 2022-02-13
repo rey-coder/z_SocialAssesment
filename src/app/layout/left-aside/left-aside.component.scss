@@ -1,0 +1,12 @@
+ul.side-sections {
+    margin-bottom: 100px;
+}
+
+ul.side-sections,
+ul.side-friends {
+    list-style: none;
+}
+
+ul.side-sections > li {
+    padding: 10px 5px;
+}

@@ -1,0 +1,8 @@
+<a href="javascript:void(0)" (click)="ProfileTouched()" [routerLink]="'/profile/'+ person.username + '/' + person.id +'/feed'" class="profile-link" [style]="customStyle">
+    <img *ngIf="person.avator" [src]="person.avator" class="avator avi-sm" alt="">
+    <ng-template #defaultAvator> <img class="avator" src="../../../assets/img/{{ person.gender == 'Male' ? 'avator_man' : 'avatorWoman' }}" alt=""> </ng-template>
+    <div>
+        <div *ngIf="showDisplayname"> {{ person.displayName }} </div>
+        <small *ngIf="showUsername">@{{person.username}} </small>
+    </div>
+</a>

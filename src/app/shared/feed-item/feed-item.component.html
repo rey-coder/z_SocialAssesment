@@ -1,0 +1,19 @@
+<div *ngIf="feedItem" class="feedItem">
+    <div class="container-flex">
+        <app-profile-avator [person]="user" *ngIf="user" [showUsername]="true"></app-profile-avator>
+        <div style="flex-grow: 8;" class=""></div>
+        <small>{{ feedItem.timestamp | date:'dd-mm-yy HH:mm a' }}</small>
+    </div>
+    <div>
+        <div><small>{{ feedItem.post }}</small></div>
+        <div *ngIf="feedItem.image" style="margin: 2px 0; text-align: center;">
+            <img [src]="feedItem.image" alt="post-image" style="width: 80%;">
+        </div>
+        <div style="margin: 15px 0;">
+            <small class="feed-actions">
+                <a href="javascript:void()"><i class="fa fa-thumbs-up" style="margin: 0 10px;"></i> {{ feedItem.likes }} <em>Likes</em></a>
+                <a href="javascript:void()"><i class="fa fa-comments" style="margin: 0 10px;"></i> {{ feedItem.comments }} <em>comments</em></a>
+            </small>
+        </div>
+    </div>
+</div>
